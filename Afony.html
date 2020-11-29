@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-s8ale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HorshWol</title>
+		<link rel="stylesheet" type="text/css" href="Новый.css" />
+		<link rel="Shortcut Icon" href="favicon.ico">
+	</head>
+	<body  style="background-attachment:fixed" topmargin="0">
+	<h2>Вход на сайт</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Вход</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+      <img src="https://dvfu-english.ru/images/321/31_%D0%B0%D0%B2%D0%B3%D1%83%D1%81%D1%82%D0%B0.jpeg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Введите</b></label>
+      <input type="text" placeholder="Имя" name="uname" required>
+
+      <label for="psw"><b>Данные</b></label>
+      <input type="password" placeholder="Пароль" name="psw" required>
+        
+      <button type="submit">Логин</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Запомнить меня
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Отменить</button>
+      <span class="psw">Забыл <a href="#">пароль?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+	<form action="http://google.com/search" target="_blank">
+  <input type="search" name="q">
+  <input type="hidden" name="as_sitesearch" value="file:///C:/Users/admin/Desktop/Chat/Afony.html">  <!-- «shpargalkablog.ru» заменить на свой адрес сайта -->
+  <input type="submit" value="Найти" placeholder="Что ищем?">
+</form><br><br><br><br><br><br> 
+	<h6>Пииск будет проходить в google</h6>
+		<div id="myDIV" class="header">
+  <h2>Мой Список Дел</h2>
+  <input type="text" id="myInput" placeholder="Добавь новое дело!">
+  <span onclick="newElement()" class="addBtn">Добавь</span>
+</div>
+
+<ul id="myUL">
+  <li>Сходи в спортзал</li>
+  <li class="checked">Оплачивать счета</li>
+  <li>Отметить Мамен день рождения!</li>
+  <li>Сходить в магазин</li>
+  <li>Читать книгу</li>
+  <li>Пойти на работу</li>
+</ul>
+		<h2 id="first">Все это только начало!</h2>
+		<table border="1" bgcolor="#7FFFD4" height="100" cellpadding="10" style="width:100%; border-radius:5px;">
+<tr>
+<th>
+<h3 id="Asa">Конец</h3>
+<p id="Ama">Всем пока, это всё, а всё остольное в завтра!</p>
+	<div>
+		 <h1 id="qwert">Кликните по картинке, чтобы перейти на мой instagram </h1>
+		<a href="https://instagram.com/_bermet_98?igshid=73e07eogjzsb"><img src="Anime-Two.jpg" width="150px"></a>
+		</div>
+		<div>
+			<h1 id="qwer">Связь с автором.</h1>
+		<a href="bemais98@gmail.com"><img src="Anime-tree.jpg" width="150px"></a>
+		</div>
+	<h5 id="Fak" >Связь с создателям!</h5>
+	<a id="sos" href="#" style="text-align:right">+996703008023</a>
+</th>
+</tr>
+</table>
+<script>
+		var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+	</body>
+</html>
